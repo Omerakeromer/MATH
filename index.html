@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMER ABO AKER</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            margin: 20px auto;
+            width: 80%;
+        }
+        .question {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #222;
+            border-radius: 5px;
+        }
+        .answer-input {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #444;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            width: 80%;
+            text-align: right;
+        }
+        .tools {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .tool {
+            padding: 10px;
+            background-color: #555;
+            border-radius: 5px;
+            cursor: grab;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+        }
+    </style>
+    <script>
+        function checkAnswer(questionNum, correctAnswers) {
+            let userAnswer = document.getElementById('answer' + questionNum).value;
+            if (correctAnswers.includes(userAnswer.trim())) {
+                alert('الإجابة صحيحة!');
+            } else {
+                alert('الإجابة غير صحيحة، حاول مرة أخرى.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>OMER ABO AKER</header>
+    <div class="content">
+        <div class="tools">
+            <div class="tool">√</div>
+            <div class="tool">^</div>
+            <div class="tool">+</div>
+            <div class="tool">-</div>
+            <div class="tool">×</div>
+            <div class="tool">÷</div>
+        </div>
+        
+        <div class="question">
+            <p>جد قيمة "س" إذا كان: ق(س) = ٢س + ١، وق(س) = ١١.</p>
+            <input type="text" id="answer1" class="answer-input" placeholder="اكتب إجابتك هنا">
+            <button onclick="checkAnswer(1, ['5', '٥'])">تحقق من الإجابة</button>
+        </div>
+
+        <div class="question">
+            <p>إذا كان ق(س) = س^٢، والمجال هو {١، ٢، ٣}، جد المدى.</p>
+            <input type="text" id="answer2" class="answer-input" placeholder="اكتب إجابتك هنا">
+            <button onclick="checkAnswer(2, ['{1, 4, 9}', '{١، ٤، ٩}'])">تحقق من الإجابة</button>
+        </div>
+
+        <div class="question">
+            <p>جد معادلة الاقتران العكسي إذا كان ق(س) = ٢س + ٣.</p>
+            <input type="text" id="answer3" class="answer-input" placeholder="اكتب إجابتك هنا">
+            <button onclick="checkAnswer(3, ['(س - ٣) ÷ ٢', '(س - 3) ÷ 2'])">تحقق من الإجابة</button>
+        </div>
+
+        <div class="question">
+            <p>إذا كان ق(س) = ٣س - ٥، أوجد قيمة ق(٤).</p>
+            <input type="text" id="answer4" class="answer-input" placeholder="اكتب إجابتك هنا">
+            <button onclick="checkAnswer(4, ['7', '٧'])">تحقق من الإجابة</button>
+        </div>
+
+        <div class="question">
+            <p>جد المجال إذا كان ق(س) = ١ / (س - ٢).</p>
+            <input type="text" id="answer5" class="answer-input" placeholder="اكتب إجابتك هنا">
+            <button onclick="checkAnswer(5, ['كل الأعداد الحقيقية عدا ٢', 'جميع الأعداد الحقيقية ما عدا ٢'])">تحقق من الإجابة</button>
+        </div>
+
+        <div class="question">
+            <p>إذا كان ق(س) = س^٣، أوجد ق(٢).</p>
+            <input type="text" id="answer6" class="answer-input" placeholder="اكتب إجابتك هنا">
+            <button onclick="checkAnswer(6, ['8', '٨'])">تحقق من الإجابة</button>
+        </div>
+        
+        <!-- يمكن إضافة المزيد من الأسئلة حسب الطلب -->
+    </div>
+    <footer>حقوق النشر محفوظة لـ OMER ABO AKER</footer>
+</body>
+</html>
